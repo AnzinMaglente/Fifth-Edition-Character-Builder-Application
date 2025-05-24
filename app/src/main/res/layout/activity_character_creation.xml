@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".CharacterCreation">
+
+    <LinearLayout
+        android:id="@+id/char_frame"
+        android:layout_width="100sp"
+        android:layout_height="150sp"
+        android:layout_marginStart="25sp"
+        android:layout_marginTop="35sp"
+        android:orientation="vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/char_img"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:contentDescription="@string/image_hover_desc"
+            android:background="@drawable/backgroundframe2"
+            android:src="@drawable/avatar_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:text="@string/image_desc"
+            android:textColor="@color/secondary"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="@+id/char_img"
+            app:layout_constraintTop_toBottomOf="@+id/char_img"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="245dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20sp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@+id/char_frame"
+        app:layout_constraintTop_toTopOf="@+id/char_frame">
+
+        <LinearLayout
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_prompt"
+                android:textSize="16sp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/name_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginStart="1sp"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:hint="@string/name_hint"
+                android:textSize="14sp"
+                android:textColor="@color/secondary"
+                android:textColorHint="@color/secondary"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/race_prompt"
+                android:textSize="16sp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                />
+            <Spinner
+                android:id="@+id/race_dd"
+                android:layout_width="182sp"
+                android:layout_height="48sp"
+                android:layout_marginStart="8sp"
+                android:spinnerMode="dropdown"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="245dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/class_prompt"
+                android:textSize="16sp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                />
+            <Spinner
+                android:id="@+id/class_dd"
+                android:layout_width="182sp"
+                android:layout_height="48sp"
+                android:layout_marginStart="4sp"
+                android:spinnerMode="dropdown"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expanded_details"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toStartOf="@+id/char_frame"
+        app:layout_constraintTop_toBottomOf="@+id/char_frame">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginBottom="35dp"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/level_prompt"
+                android:textSize="16sp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                />
+            <EditText
+                android:id="@+id/lvl_edt"
+                android:layout_width="60sp"
+                android:layout_height="48sp"
+                android:layout_marginStart="5sp"
+                android:layout_marginEnd="30dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:hint="@string/lvl_hint"
+                android:textColor="@color/secondary"
+                android:textColorHint="@color/secondary"
+                android:maxLength="20"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/background_prompt"
+                android:textSize="16sp"
+                android:textColor="@color/secondary"
+                android:textStyle="bold"
+                />
+
+            <Spinner
+                android:id="@+id/background_dd"
+                android:layout_width="130sp"
+                android:layout_height="48sp"
+                android:layout_marginStart="4sp"
+                android:spinnerMode="dropdown"
+                tools:ignore="VisualLintBounds" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="292dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alignment_prompt"
+                android:textColor="@color/secondary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/alignment_dd"
+                android:layout_width="200sp"
+                android:layout_height="48sp"
+                android:layout_marginStart="12sp"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/description_prompt"
+            android:textColor="@color/secondary"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/desc_edt"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="top"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            android:textColor="@color/secondary"
+            android:textColorHint="@color/secondary"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="35dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stats"
+        android:layout_width="200dp"
+        android:layout_height="335dp"
+        android:orientation="vertical"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/expanded_details"
+        app:layout_constraintStart_toStartOf="@id/expanded_details">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+
+            <LinearLayout
+                android:layout_width="83dp"
+                android:layout_height="103dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                android:background="@color/secondary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/str_edt"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/str_edt"
+                    android:layout_width="58dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:hint="@string/str_edt"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/main"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/str_txt"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@color/white"
+                    android:text="@string/default_value"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="83dp"
+                android:layout_height="103dp"
+                android:orientation="vertical"
+                android:background="@color/secondary"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/dex_edt"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/dex_edt"
+                    android:layout_width="58dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:inputType="number"
+                    android:hint="@string/dex_edt"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/main"
+                    android:textAlignment="center"
+                    android:maxLength="20"
+                    tools:ignore="Autofill"
+                    />
+
+                <TextView
+                    android:id="@+id/dex_txt"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/default_value"
+                    android:textAlignment="center"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="12dp"
+            >
+
+            <LinearLayout
+                android:layout_width="83dp"
+                android:layout_height="103dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/secondary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/int_edt"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/int_edt"
+                    android:layout_width="58dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:hint="@string/int_edt"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/main"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/int_txt"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@color/white"
+                    android:text="@string/default_value"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="83dp"
+                android:layout_height="103dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/secondary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/wis_edt"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/wis_edt"
+                    android:layout_width="58dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:hint="@string/wis_edt"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/main"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/wis_txt"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@color/white"
+                    android:text="@string/default_value"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="12dp"
+            >
+
+            <LinearLayout
+                android:layout_width="83dp"
+                android:layout_height="103dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/secondary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/cha_edt"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/cha_edt"
+                    android:layout_width="58dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:hint="@string/cha_edt"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/main"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/cha_txt"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@color/white"
+                    android:text="@string/default_value"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:layout_width="83dp"
+                android:layout_height="103dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="@color/secondary">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/con_edt"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/con_edt"
+                    android:layout_width="58dp"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:hint="@string/con_edt"
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/main"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/con_txt"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@color/white"
+                    android:text="@string/default_value"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_btn"
+        android:layout_width="150dp"
+        android:layout_height="335dp"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/stats"
+        app:layout_constraintTop_toTopOf="@id/stats">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/secondary"
+                tools:ignore="TextSizeCheck">
+
+                <TextView
+                    android:id="@+id/htl_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/default_value_two"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/htl_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/htl_txt"
+                    android:textColor="@color/white"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:layout_width="25dp"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:background="@color/secondary"
+                tools:ignore="TextSizeCheck">
+
+                <TextView
+                    android:id="@+id/armor_class_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/default_value_two"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/armor_class_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/armorclasstxt"
+                    android:textColor="@color/white"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10sp"
+            android:background="@color/secondary">
+
+            <TextView
+                android:id="@+id/exp_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="@string/exp_txt"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                />
+
+            <EditText
+                android:id="@+id/exp_edt"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="50dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="18dp"
+                android:hint="@string/default_value_two"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/main"
+                android:textSize="20sp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/other_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rectangle_btn"
+            android:text="@string/view_other_btn"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_info_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_btn"
+            android:text="@string/save_info_btn"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rectangle_btn"
+            android:text="@string/back_btn"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

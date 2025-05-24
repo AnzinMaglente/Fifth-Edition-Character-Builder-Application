@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".OtherDetails">
+
+    <LinearLayout
+        android:id="@+id/desc_edt"
+        android:layout_width="175dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/perstxt"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/persEdt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="top"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textColor="@color/secondary"
+            android:textColorHint="@color/secondary"
+            android:textSize="14sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/ideals_txt"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/idl_edt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="top"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textColor="@color/secondary"
+            android:textColorHint="@color/secondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/bonds_txt"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/bnd_edt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="top"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textColor="@color/secondary"
+            android:textColorHint="@color/secondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/flaws_txt"
+            android:textStyle="bold"
+            android:textColor="@color/secondary"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/flws_edt"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="top"
+            android:hint="@string/description_hint"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:textColor="@color/secondary"
+            android:textColorHint="@color/secondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="175dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:gravity="end"
+        app:layout_constraintStart_toEndOf="@id/desc_edt"
+        app:layout_constraintTop_toTopOf="@+id/desc_edt">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/equipment_txt"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:background="@drawable/backgroundframe"
+            />
+
+        <ListView
+            android:id="@+id/equip_LV"
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:background="@drawable/backgroundframe"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:scrollbars="vertical"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_btn"
+            android:text="@string/add_btn"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/remove_btn"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_btn"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/split_content"
+        android:layout_width="360dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/desc_edt"
+        app:layout_constraintTop_toBottomOf="@+id/desc_edt"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/stats_desc"
+        android:layout_width="360dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/backgroundframe"
+        app:layout_constraintStart_toStartOf="@+id/split_content"
+        app:layout_constraintTop_toBottomOf="@+id/split_content">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/stats_pages"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/backgroundframe"
+        app:tabTextColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/stats_desc"
+        app:layout_constraintTop_toBottomOf="@+id/stats_desc"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/rectangle_btn"
+        android:text="@string/back_btn"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/stats_desc"
+        app:layout_constraintTop_toBottomOf="@+id/stats_desc"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_info_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/rectangle_btn"
+        android:text="@string/save_info_btn"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/stats_desc"
+        app:layout_constraintTop_toTopOf="@+id/back_btn"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

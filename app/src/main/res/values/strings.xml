@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Fifth Edition Character Builder</string>
+    <string name="app_title"><![CDATA[D&D Character Creation]]></string>
+
+    <string name="default_value">0</string>
+    <string name="default_value_two">10</string>
+
+    <string name="image_hover_desc">Add Image</string>
+    <string name="image_desc">Character Profile</string>
+    <string name="name_prompt">Name:</string>
+    <string name="race_prompt">Race:</string>
+    <string name="name_hint">Insert character\'s name here</string>
+    <string name="class_prompt">Class:</string>
+    <string name="description_prompt">Short Description:</string>
+    <string name="description_hint">Write a small description here.</string>
+    <string name="background_prompt">Background:</string>
+    <string name="alignment_prompt">Alignment:</string>
+    <string name="level_prompt">Level:</string>
+
+    <string name="str_edt">STR</string>
+    <string name="dex_edt">DEX</string>
+    <string name="int_edt">INT</string>
+    <string name="wis_edt">WIS</string>
+    <string name="cha_edt">CHA</string>
+    <string name="con_edt">CON</string>
+    <string name="htl_txt">HP</string>
+    <string name="exp_txt">EXP</string>
+
+    <string name="view_other_btn">View Other</string>
+    <string name="save_info_btn">Save Info</string>
+    <string name="back_btn">Back</string>
+    <string name="armorclasstxt">AC</string>
+    <string name="app_info">App Info</string>
+    <string name="perstxt">Personality:</string>
+    <string name="ideals_txt">Ideals:</string>
+    <string name="bonds_txt">Bonds:</string>
+    <string name="flaws_txt">Flaws:</string>
+    <string name="equipment_txt">Equipment</string>
+    <string name="view_main_btn">View Main Sheet</string>
+    <string name="add_btn">Add</string>
+    <string name="remove_btn">Remove</string>
+    <string name="lvl_hint">1 – 20</string>
+    <string name="float_btn">Add Character</string>
+    <string name="start_desc">Don\'t have a character yet? Press the bottom right button!</string>
+
+    <string name="skills_tab_1">Skills pg. 1</string>
+    <string name="skills_tab_2">Skills pg. 2</string>
+    <string name="skills_tab_3">Skills pg. 3</string>
+
+    <string name="acrobatics_skill_txt">Acrobatics (Dex)</string>
+    <string name="animal_handling_skill_txt">Animal Handling (Wis)</string>
+    <string name="arcana_skill_txt">Arcana (Int)</string>
+    <string name="athletics_skill_txt">Athletics (Str)</string>
+    <string name="deception_skill_txt">Deception (Cha)</string>
+    <string name="history_skill_txt">History (Int)</string>
+    <string name="insight_skill_txt">Insight (Wis)</string>
+    <string name="intimidation_skill_txt">Intimidation (Cha)</string>
+    <string name="investigation_skill_txt">Investigation (Int)</string>
+    <string name="medicine_skill_txt">Medicine (Wis)</string>
+    <string name="nature_skill_txt">Nature (Int)</string>
+    <string name="perception_skill_txt">Perception (Wis)</string>
+    <string name="performance_skill_txt">Performance (Cha)</string>
+    <string name="persuasion_skill_txt">Persuasion (Cha)</string>
+    <string name="religion_skill_txt">Religion (Int)</string>
+    <string name="sleight_of_hand_skill_txt">Sleight of Hand (Dex)</string>
+    <string name="stealth_skill_txt">Stealth (Dex)</string>
+    <string name="survival_skill_txt">Survival (Wis)</string>
+    <string name="read_more_txt">Read More...</string>
+
+    <string-array name="race_list">
+        <item>Dwarf</item>
+        <item>Elf</item>
+        <item>Halfing</item>
+        <item>Human</item>
+        <item>Dragonborn</item>
+        <item>Gnome</item>
+        <item>Half-Elf</item>
+        <item>Half-Orc</item>
+        <item>Tiefling</item>
+    </string-array>
+
+    <string-array name="class_list">
+        <item>Barbarian</item>
+        <item>Bard</item>
+        <item>Cleric</item>
+        <item>Druid</item>
+        <item>Fighter</item>
+        <item>Monk</item>
+        <item>Paladin</item>
+        <item>Ranger</item>
+        <item>Rogue</item>
+        <item>Sorcerer</item>
+        <item>Warlock</item>
+        <item>Wizard</item>
+    </string-array>
+
+    <string-array name="background_list">
+        <item>Acolyte</item>
+        <item>Criminal</item>
+        <item>Noble</item>
+        <item>Solder</item>
+        <item>Urchin</item>
+    </string-array>
+
+    <string-array name="alignment_list">
+        <item>Lawful Good</item>
+        <item>Neutral Good</item>
+        <item>Chaotic Good</item>
+        <item>Lawful Neutral</item>
+        <item>True Neutral</item>
+        <item>Chaotic Neutral</item>
+        <item>Lawful Evil</item>
+        <item>Neutral Evil</item>
+        <item>Chaotic Evil</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_1_txt">Character</string>
+    <string name="title_2_txt">Builder</string>
+    <string name="title_3_txt">5</string>
+    <string name="title_4_txt">th</string>
+    <string name="title_5_txt">Edition</string>
+</resources>
