@@ -30,7 +30,7 @@ class OtherDetails : AppCompatActivity() {
     private val keyCharPers = stringPreferencesKey("personality")
     private val keyCharIdl = stringPreferencesKey("ideals")
     private val keyCharBnd = stringPreferencesKey("bonds")
-    private val keyCharFlws = stringPreferencesKey("")
+    private val keyCharFlws = stringPreferencesKey("flaws")
     private val keyCharItms = stringPreferencesKey("items")
 
     // Checks if any value is empty, if so deletes the value.
