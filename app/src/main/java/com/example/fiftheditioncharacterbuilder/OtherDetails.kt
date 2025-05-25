@@ -33,6 +33,7 @@ class OtherDetails : AppCompatActivity() {
     private val keyCharFlws = stringPreferencesKey("")
     private val keyCharItms = stringPreferencesKey("items")
 
+    // Checks if any value is empty, if so deletes the value.
     private fun removeValuesViaIteration(listWithNullsAndEmpty: MutableList<String>): List<String> {
         val iterator = listWithNullsAndEmpty.iterator()
         while (iterator.hasNext()) {
